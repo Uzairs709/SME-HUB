@@ -1,0 +1,69 @@
+.piedra-regular {
+    font-family: "Piedra", serif;
+    font-weight: 400;
+    font-style: normal;
+  }  
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color:#F5DCFA;
+  }
+  
+  .container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .left {
+    flex: 1;
+  }
+  
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Piedra", serif;
+    font:bold;
+    font-size: 32px;
+    color:#BD3DBA;
+
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    /* Set max-width to 50% of container width */
+    object-fit: cover;
+  }
+  
+  .login-button, .signup-button {
+    width: 100%; /* Set width to 100% to match width of parent (.right) */
+    max-width: 200px; /* Set max-width for better responsiveness */
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ffbb46;
+    color: #FFFCF3;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  a{
+    text-decoration: none;
+  }
+  
+.login-button:hover,
+.signup-button:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Add box shadow when hovering */
+}

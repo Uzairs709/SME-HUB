@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Signup.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="Signup-Container">
+      <div class="signup-image">
+        <script
+          src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+          type="module"
+        ></script>
+
+        <dotlottie-player
+          src="https://lottie.host/5c01ca40-3a20-4297-b368-33762f2142ef/YQx8pOD24t.json"
+          background="transparent"
+          speed="1"
+          style="
+            width: 400px;
+            height: 400px;
+            margin-left: 350px;
+            margin-top: 220px;
+          "
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
+      <div class="signup-separator"></div>
+      <div class="Signup-Form">
+        <h1 class="log">Sign Up</h1>
+        <div class="form-container">
+          <label for="name"></label>
+          <input
+            type="text1"
+            id="username"
+            name="username"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="email"></label>
+          <input
+            type="email"
+            id="username"
+            name="username"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="password"></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Password"
+            required
+          />
+          <label for="phone"></label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Confirm Password"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="phone"></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+            required
+          />
+          <label for="phone"></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="organization"></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Organization Name"
+            required
+          />
+          <label for="phone"></label>
+          <input
+            type="url"
+            id="phone"
+            name="phone"
+            placeholder="Organization Website"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="description"></label>
+          <textarea class="bd" placeholder="Bussiness Description"></textarea>
+        </div>
+        <button type="submit">Signup</button>
+        <p class="new">
+          Already have an account?<a href="Login.html " style="display: inline">
+            Login</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

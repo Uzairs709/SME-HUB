@@ -1,0 +1,87 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the whole body a flex container */
+    min-height: 100vh; /* Set minimum height for full viewport */
+    background-color:#F5DCFA;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-grow: 1; /* Allow container to fill available space */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  .login-separator {
+    width: 1px; /* Set width of the line */
+    height: 33%; /* Set height to match container */
+    background-color: #000000; /* Set color of the line */
+    margin-left: 50px;
+  }
+  .login-form {
+    flex: 1; /* Allow form to fill remaining space */
+    padding: 30px;
+    border: none;
+    background-color: #F5DCFA;
+    margin-left: 50px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #100000;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #100000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3B56A7;
+  }
+  
+  a {
+    color: #3B56A7;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #ffbb46;
+  }
+  .login-image{
+        display: block;
+  }
+  .new{
+    margin-top: 75px;
+  }
+  
+button:hover{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    min-height: 100vh; /* Set minimum height for full viewport */
+    background-color:#F5DCFA;
+  }
+    .e{
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .on{
+        display: block;
+    }
+    .pn{
+        display: inline;
+    }
+    .bd{
+        display: block;
+    }
+    .form-container {
+        display: flex;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .Signup-Container{
+        display: flex;
+        flex-grow: 1; /* Allow container to fill available space */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content vertically */
+        height:600px;
+    }
+    .Signup-Form{
+        flex: 1; /* Allow form to fill remaining space */
+        padding: 30px;
+        border: none;
+        background-color: #F5DCFA;
+        margin-left: 50px;
+        margin-top: 200px;
+    }
+    .form-container label {
+        margin-right: 10px; /* Adds a margin to the right of the labels */
+    }
+    .form-container input[type="text1"] {
+        width: 64%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    .form-container input[type="text"] {
+        width: 30%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    .form-container input[type="tel"] {
+        width: 30%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    .form-container input[type="url"] {
+        width: 30%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    .form-container input[type="email"] {
+        width: 64%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    .bd{
+        width: 64%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+        border: 1px solid #100000; /* Change border style and color */
+        border-radius: 4px; /* Add rounded corners */
+    }
+    h1 {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .form-container{
+    margin-bottom: 15px;
+  }
+  .signup-separator {
+    width: 1px; /* Set width of the line */
+    height: 70%; /* Set height to match container */
+    background-color: #100000; /* Set color of the line */
+    margin-left: 50px;
+    margin-top: 200px;
+  }
+  .butt{
+    display: block;
+  }
+  button[type="submit"] {
+    background-color: #100000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .new{
+    margin-left: 10px;
+    margin-top: 25px;
+  }
+  a {
+    color: #3B56A7;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+  }
+  a:hover{
+    text-decoration: underline;
+    color: #ffbb46;
+  }
+
+  button:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #3B56A7;
+  }
