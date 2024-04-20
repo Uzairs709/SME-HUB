@@ -85,3 +85,25 @@ body {
 button:hover{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+.animated{
+  width: 400px; height: 400px; margin-left: 350px;
+}
+
+@media only screen and (max-width: 900px) {
+  .animated{
+    display: none !important;
+  }
+  .login-form{
+    align-items: center;
+  }
+  .login-separator{
+    display: none;
+  }
+  input[type="text"],
+  input[type="password"] {
+    width:100%;
+  }
+  .login-form{
+    margin: 10px;
+  }
+}

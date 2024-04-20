@@ -67,3 +67,18 @@ body, html {
 .signup-button:hover {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Add box shadow when hovering */
 }
+
+
+@media only screen and (max-width: 768px) {
+  .left{
+    display: none;
+  }
+  h1{
+    margin-left: 25px;
+  }
+  .right{
+    align-items: center;
+  }
+  
+  
+}

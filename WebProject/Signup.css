@@ -22,7 +22,7 @@ body {
     }
     .form-container {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         margin-top: 10px;
     }
     .Signup-Container{
@@ -84,9 +84,6 @@ body {
     margin-top: 30px;
     margin-left: 10px;
   }
-  .form-container{
-    margin-bottom: 15px;
-  }
   .signup-separator {
     width: 1px; /* Set width of the line */
     height: 70%; /* Set height to match container */
@@ -125,4 +122,47 @@ body {
   button:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     background-color: #3B56A7;
+  }
+
+  .animation{
+    width: 400px;
+    height: 400px;
+    margin-left: 350px;
+    margin-top: 220px;
+  }
+
+  @media only screen and (max-width: 900px){
+    .signup-image{
+      display: none !important;
+    }
+    .Signup-Form{
+      align-items: center;
+      margin-left:10px;
+      margin-right:12px;
+      padding: 2px;
+    }
+    .signup-separator{
+      display: none;
+    }
+    .form-container input[type="text1"] {
+      width: 100%; /* Adjust width as needed */
+    }
+    .form-container input[type="text"] {
+      width: 100%; /* Adjust width as needed */
+    }
+    
+    .form-container input[type="tel"] {
+      width: 100%; /* Adjust width as needed */
+    }
+    
+    .form-container input[type="url"] {
+      width: 100%; /* Adjust width as needed */
+    }
+    
+    .form-container input[type="email"] {
+      width: 100%; /* Adjust width as needed */
+    }
+    .bd{
+      width: 100%;
+    }
   }
