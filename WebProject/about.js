@@ -29,3 +29,12 @@ updateHeadingBasedOnWidth();
 // Event listener to update heading if screen width changes
 window.addEventListener("resize", updateHeadingBasedOnWidth);
 
+// Hide dropdown content when mouse leaves the dropdown
+var dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('mouseleave', function() {
+    var dropdownContent = this.querySelector('.dropdown-content');
+    dropdownContent.style.display = 'none';
+});
+
+
+
