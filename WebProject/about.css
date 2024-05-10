@@ -686,3 +686,7 @@ hr {
 #profile-dropdown.hidden {
   display: none; /* Redundant for clarity */
 }
+
+a{
+  color: #000000;
+}

@@ -21,10 +21,10 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="hamburger-menu" onclick="openSidebar()">
+      <div class="hamburger-menu">
         <label class="hamburger">
           <input type="checkbox">
-          <svg viewBox="0 0 32 32">
+          <svg id="burg" viewBox="0 0 32 32"  onclick="openSidebar()">
             <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
             <path class="line" d="M7 16 27 16"></path>
           </svg>
@@ -33,7 +33,7 @@
           <div class="bar"></div>
           <div class="bar"></div>
       </div>
-      <div class="sidebar" id="sidebar">
+      <div class="sidebar" id="sidebar" style="display: none;">
         <div class="Top">
           <p class="Heading">SME Hub</p>
         </div>
@@ -45,10 +45,9 @@
           
         </div>
         <div class="sidebar_main">
-        <a href="#" class="closebtn" id="clsbtn" onclick="openSidebar()">&times;</a>
-        <a href="#"><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
+        <a href="#" class="closebtn" id="clsbtn" onclick="svgClicked()">&times;</a>
+        <a href=""><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
         <a href="#"><i class="fi fi-ts-investment" style="margin-right: 8px;"></i> Invest</a>
-        <a href="#"><i class="fi fi-ts-messages" style="margin-right: 8px;"></i> Messages</a>
         <a href="#" onclick="toggleDarkMode()"><i class="fi fi-ts-moon" style="margin-right: 8px;"></i> Dark Mode</a>
        
       </div>
@@ -73,21 +72,22 @@
       </div>
       </div>
       <ul class="nav-links">
-        <li>Home</li>
+        <!-- Ajwa -->
+        <a href="#"><li>Home</li></a>
         
-        <li class="dropdown-header">Invest <i class="fi fi-ts-angle-small-down"></i>
-          <div class="dropdown-content">
+        <li class="dropdown-header" onclick="openDropdown()">Invest <i class="fi fi-ts-angle-small-down"></i>
+          <div class="dropdown-content" id="dop">
             <div class="row">
               <div class="column">
-                  <button class="drop-1">Small Business</button>
+                 <a href="listORinvest.html"> <button id="smallBusiness" class="drop-1">Small Business</button></a>
               </div>
               <div class="column">
-                  <button class="drop-2">Medium Business</button>
+                 <a href="listORinvest.html"><button id="mediumBusiness" class="drop-2">Medium Business</button></a> 
               </div>
           </div>
       </li>
-        <li>Contact</li>
-        <li>About Us</li>
+        <a href="Contact.html" ><li>Contact</li></a>
+        <a href="aboutus.html"><li>About Us</li></a>
     </ul>
     <div class="profile-icon" onclick="toggleDropdown()">
       <a href="#" class="tab">
@@ -153,7 +153,7 @@
       <div class="left">
         <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-    <dotlottie-player src="https://lottie.host/2a26630e-07cc-4303-a900-ff6bae1cf1e4/b1zA67sT6U.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></dotlottie-player>
+    <dotlottie-player src="https://lottie.host/2a26630e-07cc-4303-a900-ff6bae1cf1e4/b1zA67sT6U.json" background="transparent" speed="1" style="width: 700px; height: 700px; margin-top: 80px;" loop autoplay></dotlottie-player>
       </div>
       <div class="right">
         <h1 id="heading">Welcome To SME HUB</h1>
@@ -169,7 +169,9 @@
         <div class="footer-col">
           <h3 class="footer-heading">Opportunities</h3>
           <ul>
+            <!-- Ajwa -->
             <li><a href="#">Investors</a></li>
+
             <li><a href="listORinvest.html">Companies</a></li>
             <li><a href="listORinvest.html">Find a Company</a></li>
             <li><a href="listORinvest.html">Find an Investor</a></li>
@@ -178,9 +180,12 @@
         <div class="footer-col">
           <h3 class="footer-heading">Help</h3>
           <ul>
+            <!-- Izza -->
             <li><a href="#">Investment Criteria</a></li>
             <li><a href="stats.html">Statistics</a></li>
+            <!-- izza -->
             <li><a href="#">Track Request</a></li>
+            <!-- some changes feedback high color black -->
             <li><a href="#">File Complain</a></li>
           </ul>
         </div>
@@ -189,6 +194,7 @@
           <ul>
             <li><a href="about.html">About SME Hub</a></li>
             <li><a href="news.html">News</a></li>
+            <!-- bnna hai abhi Ajwa -->
             <li><a href="#">Investors</a></li>
             <li><a href="purpose.html">Purpose</a></li>
             <li><a href="Contact.html">Contact US</a></li>
