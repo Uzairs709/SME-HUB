@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="complain.css">
-    <title>Complain Page</title>
+    <link rel="stylesheet" href="investmentPlan.css">
+    <title>Investment Plans</title>
 </head>
 <body>
     <nav class="navbar">
@@ -82,70 +82,83 @@
     </nav>
 
     <div class="Intro-Container">
+        <div class="investmentIntro">
+            <h1>Investment criteria: <br>Unlock investment <span style="color: #F0A741"> potential</span> for your <span style="color: #F0A741"> vision </span> stories!</h1>
+            <p class="para">At SME Hub, we streamline financial data analysis. Our platform offers intuitive tools and comprehensive insights, empowering you to make informed investment decisions with ease.</p>
+        </div>
+
         <div class="introImage">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-            <dotlottie-player src="https://lottie.host/42d28f68-3b7e-467e-80de-a9c47e3ad1ec/OH6Iw2lbry.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-        </div>
-        
-        <div class="complainIntro">
-            <h1>Give Feedback: <br>Unlock investment <span style="color: #F0A741"> potential</span> for your <span style="color: #F0A741"> vision </span> stories!</h1>
-            <p class="para">By providing feedback you can help us identify our strengths and weaknesses and show appreciation for things that went well. You are also sharing your experience with other users, which can help them make more informed choices.</p>
+            <dotlottie-player src="https://lottie.host/eec9ac01-42b8-4451-b254-2dc8ab84fa1a/1HI4Rv3QNB.json" background="transparent" speed="1" style="width: 400px; height: 300px;" loop autoplay></dotlottie-player>
         </div>
     </div>
 
-    <div class="complain-container">
-        <form action="" class="complain-form">
-            <h1 class='lg-heading'>Feedback</h1>
-            <p class="text-grey">Let us know about your concerns and requests by filling out the form below.</p>
 
-            <div class="form-group">
-                <label for="email"></label>
-                <input
-                    type="email"
-                    id="username"
-                    name="username"
-                    placeholder="Email"
-                    required
-                />
+    <div class="plan-container">
+        <div class="plan-heading">
+            <h1>Choose the plan that's right for you</h1>
+        </div>
+
+        <div class="plan-categories">
+            <div class="basic">
+                <p>Basic Plan</p>
+                <h2>Rs 5000<span>/monthly</span></h2>
+
+                <div class="getStarted-btn">
+                    <button type="submit" class="plan-btn">INVEST</button>
+                </div>
+
+                <ul>
+                    <li>Dolor sit amet consectetur.</li>
+                    <li>Lorem dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor.</li>
+                </ul>
             </div>
 
-            <div class="form-group">
-                <label for="name"></label>
-                <input
-                    type="text1"
-                    id="username"
-                    name="username"
-                    placeholder="Name"
-                    required
-                />
+            <div class="premium">
+                <p>Premium Plan</p>
+                <h2>Rs 20000<span>/monthly</span></h2>
+
+                <div class="getStarted-btn">
+                    <button type="submit" class="plan-btn">INVEST</button>
+                </div>
+
+                <ul>
+                    <li>Lorem ipsum, dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor.</li>
+                    <li>Sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor.</li>
+                </ul>
             </div>
 
-            <div class="form-group">
-                <label for="phone"></label>
-                <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Phone Number"
-                required
-                />
+            <div class="standard">
+                <p>Standard Plan</p>
+                <h2>Rs 10000<span>/monthly</span></h2>
+
+                <div class="getStarted-btn">
+                    <button type="submit" class="plan-btn">INVEST</button>
+                </div>
+
+                <ul>
+                    <li>Dolor sit amet consectetur.</li>
+                    <li>Lorem dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor.</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="form-group">
-                <label for="description"></label>
-                <textarea class="message" placeholder="Feedback"></textarea>
-            </div>
-            <button type="submit" class="complain-form-btn">Submit</button>
-
-        </form>
-
-
-        <div class="complain-image">
-            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-
-            <dotlottie-player src="https://lottie.host/4e759151-61f3-4925-b11a-7d13fccf7970/4YalOCJiQe.json" background="transparent" speed="1" style="width: 500px; height: 500px;" loop autoplay></dotlottie-player>
+        <div class="pricing-faq">
+            <h2>Pricing</h2>
+            <p style="margin-bottom:  40px;">At our Small and Medium Enterprise Hub, we believe in providing flexibility and personalized options for businesses of all levels. Our tiered pricing plans are designed to cater to diverse needs, ensuring that every individual can find the perfect fit for their journey.</p>
         </div>
     </div>
+    
 </body>
 </html>
