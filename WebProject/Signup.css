@@ -156,6 +156,9 @@ body {
     .form-container input[type="text"] {
       width: 100%; /* Adjust width as needed */
     }
+    .form-container input[type="password"] {
+      width: 100%; /* Adjust width as needed */
+    }
     
     .form-container input[type="tel"] {
       width: 100%; /* Adjust width as needed */
