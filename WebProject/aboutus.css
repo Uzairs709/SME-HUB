@@ -6,6 +6,9 @@ body, html {
     background-color:#F5DCFA;
     
   }
+  a{
+    color: #000000;
+  }
   .roboto-thin {
     font-family: "Roboto", sans-serif;
     font-weight: 100;
