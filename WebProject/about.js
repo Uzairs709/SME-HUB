@@ -29,6 +29,29 @@ updateHeadingBasedOnWidth();
 // Event listener to update heading if screen width changes
 window.addEventListener("resize", updateHeadingBasedOnWidth);
 
+<<<<<<< HEAD
+// Hide dropdown content when mouse leaves the dropdown
+var dropdown = document.querySelector('.dropdown');
+dropdown.addEventListener('mouseleave', function() {
+    var dropdownContent = this.querySelector('.dropdown-content');
+    dropdownContent.style.display = 'none';
+});
+function openSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  if (sidebar.style.display === "none") {
+    sidebar.style.display = "block"; // Show the sidebar if hidden
+  } else {
+    sidebar.style.display = "none"; // Hide the sidebar if visible
+  }
+}
+
+function toggleDropdown() {
+  const dropdown = document.getElementById("profile-dropdown");
+  if (dropdown.classList.contains("hidden")) {
+    dropdown.classList.remove("hidden"); // Show dropdown
+  } else {
+    dropdown.classList.add("hidden"); // Hide dropdown
+=======
 //Hide dropdown content when mouse leaves the dropdown
 // document.addEventListener("DOMContentLoaded", function () {
 //   // Select the specific div within the dropdown
@@ -61,6 +84,7 @@ function openDropdown() {
     dropdown.style.display = "block"; // Show the sidebar if hidden
   } else {
     dropdown.style.display = "none"; // Hide the sidebar if visible
+>>>>>>> 8f1d477c86fa66371254e367e17114661e2ab2ac
   }
 }
 
