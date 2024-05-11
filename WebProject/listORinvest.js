@@ -10,3 +10,4 @@ const toggleButton = document.getElementById('toggleButton');
       myFooter.style.display = 'none';
     }
   });
+  
