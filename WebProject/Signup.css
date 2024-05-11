@@ -44,7 +44,7 @@ body {
         margin-right: 10px; /* Adds a margin to the right of the labels */
     }
     .form-container input[type="text1"] {
-        width: 64%; /* Adjust width as needed */
+        width: 65%; /* Adjust width as needed */
         padding: 10px; /* Adjust padding as needed */
         border: 1px solid #100000; /* Change border style and color */
         border-radius: 4px; /* Add rounded corners */
@@ -61,6 +61,12 @@ body {
         border: 1px solid #100000; /* Change border style and color */
         border-radius: 4px; /* Add rounded corners */
     }
+    .form-container input[type="password"] {
+      width: 30%; /* Adjust width as needed */
+      padding: 10px; /* Adjust padding as needed */
+      border: 1px solid #100000; /* Change border style and color */
+      border-radius: 4px; /* Add rounded corners */
+  }
     .form-container input[type="url"] {
         width: 30%; /* Adjust width as needed */
         padding: 10px; /* Adjust padding as needed */
@@ -68,13 +74,13 @@ body {
         border-radius: 4px; /* Add rounded corners */
     }
     .form-container input[type="email"] {
-        width: 64%; /* Adjust width as needed */
+        width: 65%; /* Adjust width as needed */
         padding: 10px; /* Adjust padding as needed */
         border: 1px solid #100000; /* Change border style and color */
         border-radius: 4px; /* Add rounded corners */
     }
     .bd{
-        width: 64%; /* Adjust width as needed */
+        width: 65%; /* Adjust width as needed */
         padding: 10px; /* Adjust padding as needed */
         border: 1px solid #100000; /* Change border style and color */
         border-radius: 4px; /* Add rounded corners */
