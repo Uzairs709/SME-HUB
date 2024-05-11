@@ -45,7 +45,7 @@
           
         </div>
         <div class="sidebar_main">
-        <a href="#" class="closebtn" id="clsbtn" onclick="closeSidebar()">&times;</a>
+        <a href="#" class="closebtn" id="clsbtn" onclick="openSidebar()">&times;</a>
         <a href="#"><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
         <a href="#"><i class="fi fi-ts-investment" style="margin-right: 8px;"></i> Invest</a>
         <a href="#"><i class="fi fi-ts-messages" style="margin-right: 8px;"></i> Messages</a>
@@ -54,40 +54,35 @@
       </div>
       <div class="proff">
         <div class="sidebar_footer">
-        <a href="#"><i class="fi fi-tr-gears" style="margin-right: 8px;"></i>Settings</a>
-        <a href="#"><i class="fi fi-tr-onboarding" style="margin-right: 8px;"></i>Support</a>
+        <a href="editprofile.html"><i class="fi fi-tr-gears" style="margin-right: 8px;"></i>Settings</a>
+        <a href="Contact.html"><i class="fi fi-tr-onboarding" style="margin-right: 8px;"></i>Support</a>
       </div>
       <hr>  
       <div class="main-profile">
         <div class="left">
           <img class ="prof-pic" src="image.png">
         </div>
-        <div class="right">
+        <div class="right-1">
+          
           <p class="PName">Mohammad Khizar</p>
+          <div class="PNE">
           <p class="PEmail">muhammadkhizer6662@gmail.com</p>
+        </div>
         </div>
       </div>
       </div>
       </div>
       <ul class="nav-links">
         <li>Home</li>
+        
         <li class="dropdown-header">Invest <i class="fi fi-ts-angle-small-down"></i>
           <div class="dropdown-content">
             <div class="row">
               <div class="column">
-                  <h3>Small Business</h3>
-                  <p>Rognot</p>
-                  <p>Rumi Scents</p>
-                  <p>Shoe Republic</p>
-                  <p>Scents n Stories</p>
-                  <p>Outfits by DK</p>
+                  <button class="drop-1">Small Business</button>
               </div>
               <div class="column">
-                  <h3>Medium Business</h3>
-                  <p>DevSinc</p>
-                  <p>TopTal</p>
-                  <p>NetSole</p>
-                  <p>Pure Logics</p>
+                  <button class="drop-2">Medium Business</button>
               </div>
           </div>
       </li>
@@ -95,7 +90,7 @@
         <li>About Us</li>
     </ul>
     <div class="profile-icon" onclick="toggleDropdown()">
-      <a href="#" class="tab">
+      <a href="editprofile.html" class="tab">
         <svg
           width="104"
           height="100"
@@ -146,10 +141,11 @@
           </defs>
         </svg>
       </a>
-      <div id="dropdown-menu" class="dropdown-content">
-        <p class="prof-dropdown" ><i class="fi fi-tr-insert-alt" style="margin-right: 15px; padding-top: 35px; margin-left: 15px; width:60px; height:60px;"></i>Login/Signup to continue</p>
-        <a href="Login.html">Login</a>
-        <a href="Signup.html">Signup</a>
+      <div id="profile-dropdown" class="hidden">  <p>Login/Signup to continue</p>
+        <hr>
+        <button>Login</button>
+        <button>Signup</button>
+      </div>
     </div>
   </div>
     </nav>
@@ -174,16 +170,16 @@
           <h3 class="footer-heading">Opportunities</h3>
           <ul>
             <li><a href="#">Investors</a></li>
-            <li><a href="#">Companies</a></li>
-            <li><a href="#">Find a Company</a></li>
-            <li><a href="#">Find an Investor</a></li>
+            <li><a href="listORinvest.html">Companies</a></li>
+            <li><a href="listORinvest.html">Find a Company</a></li>
+            <li><a href="listORinvest.html">Find an Investor</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h3 class="footer-heading">Help</h3>
           <ul>
             <li><a href="#">Investment Criteria</a></li>
-            <li><a href="#">Statistics</a></li>
+            <li><a href="stats.html">Statistics</a></li>
             <li><a href="#">Track Request</a></li>
             <li><a href="#">File Complain</a></li>
           </ul>
@@ -191,11 +187,11 @@
         <div class="footer-col">
           <h3 class="footer-heading">Company</h3>
           <ul>
-            <li><a href="#">About SME Hub</a></li>
-            <li><a href="#">News</a></li>
+            <li><a href="about.html">About SME Hub</a></li>
+            <li><a href="news.html">News</a></li>
             <li><a href="#">Investors</a></li>
-            <li><a href="#">Purpose</a></li>
-            <li><a href="#">Sustainability</a></li>
+            <li><a href="purpose.html">Purpose</a></li>
+            <li><a href="Contact.html">Contact US</a></li>
           </ul>
         </div>
         <div class="footer-col">

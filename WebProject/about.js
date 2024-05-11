@@ -35,6 +35,21 @@ dropdown.addEventListener('mouseleave', function() {
     var dropdownContent = this.querySelector('.dropdown-content');
     dropdownContent.style.display = 'none';
 });
+function openSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  if (sidebar.style.display === "none") {
+    sidebar.style.display = "block"; // Show the sidebar if hidden
+  } else {
+    sidebar.style.display = "none"; // Hide the sidebar if visible
+  }
+}
 
-
+function toggleDropdown() {
+  const dropdown = document.getElementById("profile-dropdown");
+  if (dropdown.classList.contains("hidden")) {
+    dropdown.classList.remove("hidden"); // Show dropdown
+  } else {
+    dropdown.classList.add("hidden"); // Hide dropdown
+  }
+}
 
