@@ -6,15 +6,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 <link rel="stylesheet" href="aboutus.css" />
-<title>Bar Graph</title>
+<title>About Us</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="hamburger-menu">
           <label class="hamburger">
             <input type="checkbox">
-            <svg viewBox="0 0 32 32">
+            <svg id="burg" viewBox="0 0 32 32" onclick="openSidebar()">
               <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
               <path class="line" d="M7 16 27 16"></path>
             </svg>
@@ -23,9 +24,58 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        <div class="sidebar" id="sidebar" style="display: none;">
+          <div class="Top">
+            <p class="Heading">SME Hub</p>
+          </div>
+          <div class="Searchbar">
+            <div class="searchbar-container">
+              <input type="text" class="search-bar" placeholder="Search">
+              
+            </div>
+            
+          </div>
+          <div class="sidebar_main">
+          <a href="#" class="closebtn" id="clsbtn" onclick="openSidebar()">&times;</a>
+          <a href="#" class="closebtn" id="clsbtn" onclick="svgClicked()">&times;</a>
+          <a href=""><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
+          <a href="#"><i class="fi fi-ts-investment" style="margin-right: 8px;"></i> Invest</a>
+          <a href="#" onclick="toggleDarkMode()"><i class="fi fi-ts-moon" style="margin-right: 8px;"></i> Dark Mode</a>
+         
+        </div>
+        <div class="proff">
+          <div class="sidebar_footer">
+          <a href="editprofile.html"><i class="fi fi-tr-gears" style="margin-right: 8px;"></i>Settings</a>
+          <a href="Contact.html"><i class="fi fi-tr-onboarding" style="margin-right: 8px;"></i>Support</a>
+        </div>
+        <hr>  
+        <div class="main-profile">
+          <div class="left">
+            <img class ="prof-pic" src="image.png">
+          </div>
+          <div class="right-1">
+            
+            <p class="PName">Mohammad Khizar</p>
+            <div class="PNE">
+            <p class="PEmail">muhammadkhizer6662@gmail.com</p>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
         <ul class="nav-links">
           <li>Home</li>
-          <li>Invest</li>
+          <li class="dropdown-header" onclick="openDropdown()">Invest <i class="fi fi-ts-angle-small-down"></i>
+            <div class="dropdown-content" id="dop">
+              <div class="row">
+                <div class="column">
+                   <a href="listORinvest.html"> <button id="smallBusiness" class="drop-1">Small Business</button></a>
+                </div>
+                <div class="column">
+                   <a href="listORinvest.html"><button id="mediumBusiness" class="drop-2">Medium Business</button></a> 
+                </div>
+            </div>
+        </li>
           <li>Contact</li>
           <li>About Us</li>
       </ul>

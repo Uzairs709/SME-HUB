@@ -6,6 +6,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css'>
 <link rel="stylesheet" href="https://use.typekit.net/mbt4tna.css">
 <link rel="stylesheet" href="https://use.typekit.net/kid2tin.css">
 <link rel="stylesheet" href="listORinvest.css" />
@@ -26,9 +27,58 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        <div class="sidebar" id="sidebar" style="display: none;">
+          <div class="Top">
+            <p class="Heading">SME Hub</p>
+          </div>
+          <div class="Searchbar">
+            <div class="searchbar-container">
+              <input type="text" class="search-bar" placeholder="Search">
+              
+            </div>
+            
+          </div>
+          <div class="sidebar_main">
+          <a href="#" class="closebtn" id="clsbtn" onclick="openSidebar()">&times;</a>
+          <a href="#" class="closebtn" id="clsbtn" onclick="svgClicked()">&times;</a>
+          <a href=""><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
+          <a href="#"><i class="fi fi-ts-investment" style="margin-right: 8px;"></i> Invest</a>
+          <a href="#" onclick="toggleDarkMode()"><i class="fi fi-ts-moon" style="margin-right: 8px;"></i> Dark Mode</a>
+         
+        </div>
+        <div class="proff">
+          <div class="sidebar_footer">
+          <a href="editprofile.html"><i class="fi fi-tr-gears" style="margin-right: 8px;"></i>Settings</a>
+          <a href="Contact.html"><i class="fi fi-tr-onboarding" style="margin-right: 8px;"></i>Support</a>
+        </div>
+        <hr>  
+        <div class="main-profile">
+          <div class="left">
+            <img class ="prof-pic" src="image.png">
+          </div>
+          <div class="right-1">
+            
+            <p class="PName">Mohammad Khizar</p>
+            <div class="PNE">
+            <p class="PEmail">muhammadkhizer6662@gmail.com</p>
+          </div>
+          </div>
+        </div>
+        </div>
+        </div>
         <ul class="nav-links">
           <li>Home</li>
-          <li>Invest</li>
+          <li class="dropdown-header" onclick="openDropdown()">Invest <i class="fi fi-ts-angle-small-down"></i>
+            <div class="dropdown-content" id="dop">
+              <div class="row">
+                <div class="column">
+                   <a href="listORinvest.html"> <button id="smallBusiness" class="drop-1">Small Business</button></a>
+                </div>
+                <div class="column">
+                   <a href="listORinvest.html"><button id="mediumBusiness" class="drop-2">Medium Business</button></a> 
+                </div>
+            </div>
+        </li>
           <li>Contact</li>
           <li>About Us</li>
       </ul>
@@ -88,20 +138,20 @@
       </nav>
 <!-- ////////////Nav ended///////////////// -->
 <div class="Stat-Container">
-    <div class="left">
-        <h1>Explore a Wealth of<span style="color:#F0A741 ;"> Opportunities </span>to Invest or <span style="color:#F0A741">Showcase </span>Your Business to Potential Investors!</h1>
-    </div>
+  <div class="left">
+    <h1>Explore a Wealth of<span style="color:#F0A741 ;"> Opportunities </span>to Invest or <span style="color:#F0A741">Showcase </span>Your Business to Potential Investors!</h1>
+    <p class="para">At SME Hub, we're more than just a contact form. We're your gateway to streamlined communication. Reach out to us effortlessly, and let's pave the way to your next big investment move together.</p>
+</div>
+<div class="right">
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-    <div class="right">
-        <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
-
-    <dotlottie-player src="https://lottie.host/6954f8ea-d705-4bf6-8e7d-c6d9a1092bb8/tr88n3M8VY.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></dotlottie-player>
+  <dotlottie-player src="https://lottie.host/6954f8ea-d705-4bf6-8e7d-c6d9a1092bb8/tr88n3M8VY.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></dotlottie-player>
 </div>
 </div>
 
 <!-- Business section -->
 <div class="business-container">
-
+  
   <div class="business">
       <img src="./business/pink salt.jpg" alt="Business 1">
       <h3> Pink Salt Palace</h3>
@@ -308,8 +358,6 @@
     </div>
     
   </footer>
-  
-<script src="aboutus.js"></script>
 <script src="listORinvest.js"></script>
 
 </body>

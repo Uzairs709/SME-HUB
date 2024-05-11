@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-straight/css/uicons-thin-straight.css'>
     <link rel="stylesheet" href="investmentPlan.css">
     <title>Investment Plans</title>
 </head>
@@ -20,9 +22,58 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        <div class="sidebar" id="sidebar" style="display: none;">
+            <div class="Top">
+              <p class="Heading">SME Hub</p>
+            </div>
+            <div class="Searchbar">
+              <div class="searchbar-container">
+                <input type="text" class="search-bar" placeholder="Search">
+                
+              </div>
+              
+            </div>
+            <div class="sidebar_main">
+            <a href="#" class="closebtn" id="clsbtn" onclick="openSidebar()">&times;</a>
+            <a href="#" class="closebtn" id="clsbtn" onclick="svgClicked()">&times;</a>
+            <a href=""><i class="fi fi-ts-house-window" style="margin-right: 8px;"></i> Home</a>
+            <a href="#"><i class="fi fi-ts-investment" style="margin-right: 8px;"></i> Invest</a>
+            <a href="#" onclick="toggleDarkMode()"><i class="fi fi-ts-moon" style="margin-right: 8px;"></i> Dark Mode</a>
+           
+          </div>
+          <div class="proff">
+            <div class="sidebar_footer">
+            <a href="editprofile.html"><i class="fi fi-tr-gears" style="margin-right: 8px;"></i>Settings</a>
+            <a href="Contact.html"><i class="fi fi-tr-onboarding" style="margin-right: 8px;"></i>Support</a>
+          </div>
+          <hr>  
+          <div class="main-profile">
+            <div class="left">
+              <img class ="prof-pic" src="image.png">
+            </div>
+            <div class="right-1">
+              
+              <p class="PName">Mohammad Khizar</p>
+              <div class="PNE">
+              <p class="PEmail">muhammadkhizer6662@gmail.com</p>
+            </div>
+            </div>
+          </div>
+          </div>
+          </div>
         <ul class="nav-links">
           <li>Home</li>
-          <li>Invest</li>
+          <li class="dropdown-header" onclick="openDropdown()">Invest <i class="fi fi-ts-angle-small-down"></i>
+            <div class="dropdown-content" id="dop">
+              <div class="row">
+                <div class="column">
+                   <a href="listORinvest.html"> <button id="smallBusiness" class="drop-1">Small Business</button></a>
+                </div>
+                <div class="column">
+                   <a href="listORinvest.html"><button id="mediumBusiness" class="drop-2">Medium Business</button></a> 
+                </div>
+            </div>
+        </li>
           <li>Contact</li>
           <li>About Us</li>
         </ul>
@@ -83,82 +134,134 @@
 
     <div class="Intro-Container">
         <div class="investmentIntro">
-            <h1>Investment criteria: <br>Unlock investment <span style="color: #F0A741"> potential</span> for your <span style="color: #F0A741"> vision </span> stories!</h1>
+            <h1>Unlock investment <span style="color: #F0A741"> potential</span> for your <span style="color: #F0A741"> vision </span> stories!</h1>
             <p class="para">At SME Hub, we streamline financial data analysis. Our platform offers intuitive tools and comprehensive insights, empowering you to make informed investment decisions with ease.</p>
         </div>
 
         <div class="introImage">
             <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
 
-            <dotlottie-player src="https://lottie.host/eec9ac01-42b8-4451-b254-2dc8ab84fa1a/1HI4Rv3QNB.json" background="transparent" speed="1" style="width: 400px; height: 300px;" loop autoplay></dotlottie-player>
+            <dotlottie-player src="https://lottie.host/eec9ac01-42b8-4451-b254-2dc8ab84fa1a/1HI4Rv3QNB.json" background="transparent" speed="1" style="width: 700px; height: 700px;" loop autoplay></dotlottie-player>
         </div>
     </div>
 
 
     <div class="plan-container">
         <div class="plan-heading">
-            <h1>Choose the plan that's right for you</h1>
+            <h1 style="padding-top: 30px;">Choose the plan that's<span style="color:#F0A741"> right</span> for you</h1>
         </div>
 
         <div class="plan-categories">
             <div class="basic">
-                <p>Basic Plan</p>
-                <h2>Rs 5000<span>/monthly</span></h2>
+                <p style="margin-left: 5px;">Basic Plan</p>
+                <h2 style="margin-left: 5px;">Rs 5000<span>/monthly</span></h2>
 
                 <div class="getStarted-btn">
                     <button type="submit" class="plan-btn">INVEST</button>
                 </div>
 
                 <ul>
-                    <li>Dolor sit amet consectetur.</li>
-                    <li>Lorem dolor sit.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor.</li>
+                    <li style="margin-left: 5px;">Dolor sit amet consectetur.</li>
+                    <li style="margin-left: 5px;">Lorem dolor sit.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit amet.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor.</li>
                 </ul>
             </div>
 
             <div class="premium">
-                <p>Premium Plan</p>
-                <h2>Rs 20000<span>/monthly</span></h2>
+                <p style="margin-left: 5px;">Premium Plan</p>
+                <h2 style="margin-left: 5px;">Rs 20000<span>/monthly</span></h2>
 
                 <div class="getStarted-btn">
                     <button type="submit" class="plan-btn">INVEST</button>
                 </div>
 
                 <ul>
-                    <li>Lorem ipsum, dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor.</li>
-                    <li>Sit amet consectetur.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum, dolor sit amet.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit amet.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor.</li>
+                    <li style="margin-left: 5px;">Sit amet consectetur.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit amet.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor.</li>
                 </ul>
             </div>
 
             <div class="standard">
-                <p>Standard Plan</p>
-                <h2>Rs 10000<span>/monthly</span></h2>
+                <p style="margin-left: 5px;">Standard Plan</p>
+                <h2 style="margin-left: 5px;">Rs 10000<span>/monthly</span></h2>
 
                 <div class="getStarted-btn">
                     <button type="submit" class="plan-btn">INVEST</button>
                 </div>
 
                 <ul>
-                    <li>Dolor sit amet consectetur.</li>
-                    <li>Lorem dolor sit.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor.</li>
+                    <li style="margin-left: 5px;">Dolor sit amet consectetur.</li>
+                    <li style="margin-left: 5px;">Lorem dolor sit.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor sit amet.</li>
+                    <li style="margin-left: 5px;">Lorem ipsum dolor.</li>
                 </ul>
             </div>
         </div>
 
         <div class="pricing-faq">
-            <h2>Pricing</h2>
-            <p style="margin-bottom:  40px;">At our Small and Medium Enterprise Hub, we believe in providing flexibility and personalized options for businesses of all levels. Our tiered pricing plans are designed to cater to diverse needs, ensuring that every individual can find the perfect fit for their journey.</p>
+            <h2 style="text-align: center;">Pricing</h2>
+            <p style="margin-bottom:  40px; text-align: center;">At our Small and Medium Enterprise Hub, we believe in providing flexibility and personalized options for businesses of all levels. Our tiered pricing plans are designed to cater to diverse needs, ensuring that every individual can find the perfect fit for their journey.</p>
         </div>
     </div>
-    
+    <button id="toggleButton" class="swallow__icon">
+        <span></span>
+      </button>
+      <footer id="myFooter" class="footer">
+        <div class="container">
+          <div class="footer-col">
+            <h3 class="footer-heading">Opportunities</h3>
+            <ul>
+              <!-- Ajwa -->
+              <li><a href="#">Investors</a></li>
+              <li><a href="listORinvest.html">Companies</a></li>
+              <li><a href="listORinvest.html">Find a Company</a></li>
+              <li><a href="listORinvest.html">Find an Investor</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">Help</h3>
+            <ul>
+              <!-- Izza -->
+              <li><a href="#">Investment Criteria</a></li>
+              <li><a href="stats.html">Statistics</a></li>
+              <!-- izza -->
+              <li><a href="#">Track Request</a></li>
+              <!-- some changes feedback high color black -->
+              <li><a href="#">File Complain</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">Company</h3>
+            <ul>
+              <li><a href="about.html">About SME Hub</a></li>
+              <li><a href="news.html">News</a></li>
+              <!-- bnna hai abhi Ajwa -->
+              <li><a href="#">Investors</a></li>
+              <li><a href="purpose.html">Purpose</a></li>
+              <li><a href="Contact.html">Contact US</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-heading">Contact</h3>
+            <ul>
+              <li><a href="#">Address: NUCES, Faisal Town, Lahore.</a></li>
+              <li><a href="#">Email: smehub@gmail.com</a></li>
+              <li><a href="#">Phone: +92-320-999222</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="copyright">© 2024 SME Hub. All Rights Reserved.</p>
+        </div>
+        
+      </footer>
+      <script src="investmentplan.js"></script>
 </body>
 </html>

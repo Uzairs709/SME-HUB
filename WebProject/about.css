@@ -552,7 +552,7 @@ hr {
 }
 .main-profile{
   display: flex; /* Use flexbox */
-        align-items: center;
+  align-items: center;
 }
 .left {
   margin-right: 0px; /* Add margin to separate the image from text */
@@ -667,7 +667,6 @@ hr {
 .column {
   padding: 12px 16px;
   text-align: left;
-<<<<<<< HEAD
 }
 
 .profile-icon {
@@ -686,8 +685,6 @@ hr {
 
 #profile-dropdown.hidden {
   display: none; /* Redundant for clarity */
-=======
->>>>>>> 8f1d477c86fa66371254e367e17114661e2ab2ac
 }
 
 .profile-icon {
