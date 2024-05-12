@@ -84,7 +84,7 @@ router.post("/signin", (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(422).json({ error: "Invalid email or password" });
+    return res.status(422).json({ error: "empty fields" });
   }
 
   users
@@ -101,7 +101,7 @@ router.post("/signin", (req, res) => {
             const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET);
             res.json({ token });
           } else {
-            res.status(422).json({ error: "Invalid email or password" });
+            res.status(422).json({ error: "incorrect" });
           }
         })
         .catch((compareErr) => {
