@@ -13,6 +13,7 @@ require("./modles/mediumAndSmallBusiness");
 app.use(express.json());
 app.use(require("./routes/auth"));
 app.use(require("./routes/business"));
+app.use(require("./routes/invest"));
 
 mongoose.connect(MONGOURI, {
   useNewUrlParser: true,
