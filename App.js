@@ -7,7 +7,7 @@ const { MONGOURI } = require("./key");
 app.use(cors()); // Enable CORS for all routes
 // app.use(express.static(path.join(__dirname, "public")));
 
-require("./WebProject/users");
+require("./modles/users");
 
 app.use(express.json());
 app.use(require("./routes/auth"));
