@@ -8,9 +8,11 @@ app.use(cors()); // Enable CORS for all routes
 // app.use(express.static(path.join(__dirname, "public")));
 
 require("./modles/users");
+require("./modles/mediumAndSmallBusiness");
 
 app.use(express.json());
 app.use(require("./routes/auth"));
+app.use(require("./routes/business"));
 
 mongoose.connect(MONGOURI, {
   useNewUrlParser: true,
