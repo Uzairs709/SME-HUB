@@ -60,21 +60,23 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const loginForm = document.querySelector("form");
+        const signupForm = document.querySelector("#signupForm");
 
-        loginForm.addEventListener("submit", async (event) => {
+        signupForm.addEventListener("submit", async (event) => {
           event.preventDefault();
 
+          const name = document.querySelector("#name").value;
           const email = document.querySelector("#email").value;
           const password = document.querySelector("#password").value;
 
           try {
-            const response = await fetch("http://127.0.0.1:3000/signin", {
+            const response = await fetch("http://127.0.0.1:3000/signup", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
               },
               body: JSON.stringify({
+                name,
                 email,
                 password,
               }),
@@ -83,20 +85,17 @@
             const data = await response.json();
 
             if (response.ok) {
-              // Login successful
-              const token = data.token;
-              // Store the token in localStorage (you may want to use secure storage)
-              localStorage.setItem("token", token);
-              // Redirect to another page or perform actions after login
-              window.location.href = "/WebProject/frontpage.html";
+              // Signup successful
+              alert("Signup successful! Redirecting to login page.");
+              window.location.href = "login.html"; // Redirect to login page
             } else {
-              // Login failed
+              // Signup failed
               console.log(data.error); // Log the error message
-              alert("Login failed. Please check your credentials.");
+              alert("Signup failed. Please try again.");
             }
           } catch (error) {
-            console.error("Error logging in:", error);
-            alert("An error occurred while logging in.");
+            console.error("Error signing up:", error);
+            alert("An error occurred while signing up.");
           }
         });
       });

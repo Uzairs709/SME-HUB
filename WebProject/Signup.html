@@ -18,7 +18,7 @@
     <title>Sign Up</title>
   </head>
   <body>
-    <form>
+    <form id="signupForm">
       <div class="Signup-Container">
         <div class="signup-image">
           <dotlottie-player
@@ -128,137 +128,62 @@
       </div>
     </form>
     <!-- SCRIPT START HERE -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const signupForm = document.querySelector("#signupForm");
 
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-app.js";
-      import {
-        getAuth,
-        createUserWithEmailAndPassword,
-        signInWithEmailAndPassword,
-      } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-auth.js";
-      import {
-        getFirestore,
-        collection,
-        addDoc,
-        query,
-        where,
-        getDocs,
-      } from "https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js";
+        signupForm.addEventListener("submit", async (event) => {
+          event.preventDefault();
 
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyDkFhkVRw7-AcuAPRelSXFhLIjmpK1pZz0",
-        authDomain: "sme-hub-603b5.firebaseapp.com",
-        projectId: "sme-hub-603b5",
-        storageBucket: "sme-hub-603b5.appspot.com",
-        messagingSenderId: "582885271965",
-        appId: "1:582885271965:web:c8e58007444c2a3f88e774",
-        measurementId: "G-N3B4XZT9LC",
-      };
+          const name = document.querySelector("#name").value;
+          const email = document.querySelector("#email").value;
+          const password = document.querySelector("#phone").value;
+          const phone = document.querySelector("#password").value;
+          const username = document.querySelector("#username").value;
+          const organization =
+            document.querySelector("#organizationName").value;
+          const organization_Web = document.querySelector(
+            "#organizationWebsite"
+          ).value;
+          const business_description = document.querySelector(
+            "#businessDescription"
+          ).value;
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const db = getFirestore(app);
+          try {
+            const response = await fetch("http://127.0.0.1:3000/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name,
+                email,
+                password,
+                username,
+                phone,
+                organization,
+                organization_Web,
+                business_description,
+              }),
+            });
 
-      function signup() {
-        console.log("IN functions");
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-        const confirmPassword = document
-          .getElementById("confirmPassword")
-          .value.trim();
-        const username = document.getElementById("username").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const organization = document
-          .getElementById("organization")
-          .value.trim();
-        const organizationWebsite = document
-          .getElementById("organizationWebsite")
-          .value.trim();
-        const businessDescription = document
-          .getElementById("businessDescription")
-          .value.trim();
+            const data = await response.json();
 
-        // Input validation
-        let isValid = true;
-        const errorMessage = [];
-
-        if (name.length === 0) {
-          errorMessage.push("Please enter your name.");
-          isValid = false;
-        }
-
-        if (!validateEmail(email)) {
-          errorMessage.push("Please enter a valid email address.");
-          isValid = false;
-        }
-
-        if (password.length < 8) {
-          errorMessage.push("Password must be at least 8 characters long.");
-          isValid = false;
-        } else if (password !== confirmPassword) {
-          errorMessage.push("Passwords do not match.");
-          isValid = false;
-        }
-
-        // Additional input validation for phone number, username format, etc. (optional)
-
-        if (!isValid) {
-          alert(errorMessage.join("\n"));
-          return;
-        }
-
-        // Check for existing user
-        const usersRef = collection(db, "users");
-        const q = query(usersRef, where("email", "==", email));
-
-        getDocs(q)
-          .then((querySnapshot) => {
-            if (!querySnapshot.empty) {
-              alert(
-                "Email address already in use. Please choose a different one."
-              );
-              return;
+            if (response.ok) {
+              // Signup successful
+              alert("Signup successful! Redirecting to login page.");
+              window.location.href = "login.html"; // Redirect to login page
+            } else {
+              // Signup failed
+              console.log(data.error); // Log the error message
+              alert("Signup failed. Please try again.");
             }
-
-            const user = userCredential.user;
-            // Add user data to Firestore
-            addDoc(collection(db, "users"), {
-              name,
-              email,
-              username,
-              phone,
-              organization,
-              organizationWebsite,
-              businessDescription,
-              // Add any additional user profile fields as needed
-            })
-              .then(() => {
-                alert("Account created successfully! You can now log in.");
-                // Redirect user to login page or other success action
-              })
-              .catch((error) => {
-                console.error("Error adding user data:", error);
-                alert("An error occurred. Please try again later.");
-              });
-          })
-          .catch((error) => {
-            console.error("Error checking for existing user:", error);
-            alert(
-              "An error occurred while checking user availability. Please try again later."
-            );
-          });
-      }
-
-      // Function to validate email format
-      function validateEmail(email) {
-        const re =
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-      }
+          } catch (error) {
+            console.error("Error signing up:", error);
+            alert("An error occurred while signing up.");
+          }
+        });
+      });
     </script>
   </body>
 </html>
