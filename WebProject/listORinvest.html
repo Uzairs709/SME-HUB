@@ -207,6 +207,9 @@
               const investButton = document.createElement("button");
               investButton.classList.add("invest-button");
               investButton.textContent = "Invest";
+              investButton.addEventListener("click", () => {
+                window.location.href = "./investmentPlans.html";
+              });
 
               // Append image, heading, paragraph, and button to businessDiv
               businessDiv.appendChild(img);
