@@ -33,7 +33,7 @@ router.post("/invest", requireLogin, async (req, res) => {
       from: EMAIL_USER,
       to: EMAIL_USER,
       subject: "New Investment",
-      text: `Hello ${user.name},\n\nYou have made an investment of $${price}.\n\nDetails:\nPhone: ${user.phone}\nOrganization: ${user.organization}\nWebsite: ${user.organization_Web}\nUsername: ${user.username}\nBusiness Description: ${user.business_description}`,
+      text: `Hello,\n\n ${user.name} have made an investment of $${price}.\n\nDetails:\nPhone: ${user.phone}\nOrganization: ${user.organization}\nWebsite: ${user.organization_Web}\nUsername: ${user.username}\nBusiness Description: ${user.business_description}`,
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

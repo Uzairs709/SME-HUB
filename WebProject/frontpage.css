@@ -883,3 +883,8 @@ hr {
 .proff{
   margin-top: 450px;
 }
+
+a{
+  color: #000000;
+  text-decoration: none;
+}

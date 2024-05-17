@@ -1,42 +1,42 @@
-const toggleButton = document.getElementById('toggleButton');
-  const myFooter = document.getElementById('myFooter');
+const toggleButton = document.getElementById("toggleButton");
+const myFooter = document.getElementById("myFooter");
 
-  // Add event listener to the button
-  toggleButton.addEventListener('click', function() {
-    // Toggle the visibility of the footer
-    if (myFooter.style.display === 'none') {
-      myFooter.style.display = 'block';
-    } else {
-      myFooter.style.display = 'none';
-    }
-  });
-  
-  // Get all business containers
+// Add event listener to the button
+toggleButton.addEventListener("click", function () {
+  // Toggle the visibility of the footer
+  if (myFooter.style.display === "none") {
+    myFooter.style.display = "block";
+  } else {
+    myFooter.style.display = "none";
+  }
+});
+
 // Get all business containers
-const businessContainers = document.querySelectorAll('.business');
+// Get all business containers
+const businessContainers = document.querySelectorAll(".business");
 
-businessContainers.forEach(business => {
+businessContainers.forEach((business) => {
   // Add hover event listener to each business container
-  business.addEventListener('mouseenter', () => {
+  business.addEventListener("mouseenter", () => {
     // Add zoom-in class to the hovered business container
-    business.classList.add('zoom-in');
+    business.classList.add("zoom-in");
     // Add shade-down class to all business containers except the hovered one
-    businessContainers.forEach(item => {
+    businessContainers.forEach((item) => {
       if (item !== business) {
-        item.classList.add('shade-down');
+        item.classList.add("shade-down");
       }
     });
   });
 
   // Remove classes when mouse leaves
-  business.addEventListener('mouseleave', () => {
+  business.addEventListener("mouseleave", () => {
     // Remove zoom-in class from all business containers
-    businessContainers.forEach(item => {
-      item.classList.remove('zoom-in');
+    businessContainers.forEach((item) => {
+      item.classList.remove("zoom-in");
     });
     // Remove shade-down class from all business containers
-    businessContainers.forEach(item => {
-      item.classList.remove('shade-down');
+    businessContainers.forEach((item) => {
+      item.classList.remove("shade-down");
     });
   });
 });
